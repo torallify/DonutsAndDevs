@@ -1,8 +1,8 @@
-interface FamousPeople {
+export interface FamousPeople {
   complete: Person[];
 }
 
-interface Person {
+export interface Person {
   firstName: string;
   lastName: string;
   innovation: string;

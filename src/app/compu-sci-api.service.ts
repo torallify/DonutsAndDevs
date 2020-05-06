@@ -11,7 +11,7 @@ export class CompuSciAPIService {
 
   constructor(private http:HttpClient) { }
 
-  getFamousPeople():Observable<FamousPeople>
+  getFamousPeople()
   {
     return this.http.get<FamousPeople>(`${this.apiUrl}`);
   }

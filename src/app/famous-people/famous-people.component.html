@@ -1,1 +1,3 @@
-<p>famous-people works!</p>
+<div *ngFor="let person of famousPeople?.complete">
+    <app-famous-person-detail [myPeople]="person"></app-famous-person-detail>
+</div>

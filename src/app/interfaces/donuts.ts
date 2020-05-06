@@ -1,9 +1,9 @@
-interface Donuts {
+export interface Donuts {
   count: number;
   results: Donut[];
 }
 
-interface Donut {
+export interface Donut {
   id: number;
   ref: string;
   name: string;

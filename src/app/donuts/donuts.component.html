@@ -1,1 +1,3 @@
-<p>donuts works!</p>
+<div *ngFor="let donut of donuts?.results">
+    <app-donut-detail [myDonut]="donut"></app-donut-detail>
+</div>

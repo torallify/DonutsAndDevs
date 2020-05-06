@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CompuSciAPIService } from '../compu-sci-api.service';
+import { Person } from '../interfaces/famousPeople';
 
 @Component({
   selector: 'app-famous-person-detail',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./famous-person-detail.component.scss']
 })
 export class FamousPersonDetailComponent implements OnInit {
+  @Input() myPeople:Person;
 
   constructor() { }
 

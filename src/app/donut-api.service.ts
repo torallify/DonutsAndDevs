@@ -11,7 +11,7 @@ export class DonutAPIService {
 
   constructor(private http:HttpClient) { }
 
-  getDonuts():Observable<Donuts>
+  getDonuts()
   {
     return this.http.get<Donuts>(`${this.apiUrl}`);
   }

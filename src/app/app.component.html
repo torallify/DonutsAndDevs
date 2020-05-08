@@ -2,3 +2,29 @@
 <br />
 <router-outlet></router-outlet>
 
+<sprk-accordion>
+    <sprk-accordion-item
+      title="Donuts"
+      additionalClasses="sprk-u-mbs"
+      additionalHeadingClasses="sprk-b-TypeDisplaySeven"
+      idString="accordion-item-1"
+      analyticsString="object.action.event"
+    >
+      <p>
+        <app-donuts></app-donuts>
+        <router-outlet></router-outlet> 
+      </p>
+    </sprk-accordion-item>
+
+    <sprk-accordion-item
+      title="Hall of Fame (Famous Developers)"
+      idString="accordion-item-2"
+      analyticsString="object.action.event"
+      additionalHeadingClasses="sprk-b-TypeDisplaySeven"
+    >
+      <p>
+        <app-famous-people></app-famous-people>
+      </p>
+    </sprk-accordion-item>
+</sprk-accordion>
+

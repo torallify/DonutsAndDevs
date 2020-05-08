@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'donut', component:DonutsComponent},
   { path: 'people/:id', component:FamousPersonDetailComponent},
   { path: 'people', component:FamousPeopleComponent},
-  { path: '**', component:PageNotFoundComponent}
+  { path: '**', component:PageNotFoundComponent},
+  // { path: '', redirectTo: '/donuts', pathMatch: 'full' },
 ];
 
 @NgModule({

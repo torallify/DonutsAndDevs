@@ -1,3 +1,5 @@
-<div *ngFor="let donut of donuts?.results">
-    <app-donut-detail [myDonut]="donut"></app-donut-detail>
-</div>
+<ul>
+    <li *ngFor="let donut of donuts?.results, index as i">
+        <a [routerLink]="['/donut/', donut.id]">{{ donut.name }}</a>
+    </li>
+</ul>

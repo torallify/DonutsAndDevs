@@ -16,4 +16,9 @@ export class DonutAPIService {
     return this.http.get<Donuts>(`${this.apiUrl}`);
   }
 
+  getDonutById(id:number)
+  {
+    return this.http.get<Donut>(`https://grandcircusco.github.io/demo-apis/donuts/${id}.json`)
+  }
+
 }

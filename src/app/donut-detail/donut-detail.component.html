@@ -1,4 +1,3 @@
-<div>
-    {{myDonut.id}} : {{myDonut.name}}
-    <img src={{myDonut.ref}}/>
-</div>
+<h3>{{ donut?.name }}</h3>
+<em>Calories: {{ donut?.calories }}</em> <br />
+<img [src]="donut?.photo" width="200" height="200"> 

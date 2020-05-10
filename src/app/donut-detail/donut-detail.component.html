@@ -1,3 +1,5 @@
-<h3>{{ donut?.name }}</h3>
-<em>Calories: {{ donut?.calories }}</em> <br />
-<img [src]="donut?.photo" width="200" height="200"> 
+<div sprkCenteredColumn idString="centered-column">
+    <h3>{{ donut?.name }}</h3>
+    <em>Calories: {{ donut?.calories }}</em> <br />
+    <img *ngIf="donut?.photo" [src]="donut?.photo" width="200" height="200"> 
+</div>

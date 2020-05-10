@@ -1,5 +1,7 @@
-<ul>
-    <li *ngFor="let donut of donuts?.results, index as i">
-        <a [routerLink]="['/donut/', donut.id]">{{ donut.name }}</a>
-    </li>
-</ul>
+<div sprkCenteredColumn idString="centered-column">
+    <ul>
+        <li *ngFor="let donut of donuts?.results, index as i">
+            <a [routerLink]="['/donut/', donut.id]">{{ donut.name }}</a>
+        </li>
+    </ul>
+</div>  

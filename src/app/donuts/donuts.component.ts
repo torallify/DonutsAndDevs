@@ -12,11 +12,9 @@ export class DonutsComponent implements OnInit {
 
   constructor(private donutService:DonutAPIService) { }
 
-  ngOnInit(): void {
-    this.donutService.getDonuts().subscribe(
-      (data: Donuts) => this.donuts = { ...data }, 
-      error => console.error(error)
-    );
+  async ngOnInit() {
+    this.donuts = await this.donutService.getDonuts()
+    
 
   }
 

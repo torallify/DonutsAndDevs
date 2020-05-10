@@ -2,4 +2,14 @@
     <h3>{{ donut?.name }}</h3>
     <em>Calories: {{ donut?.calories }}</em> <br />
     <img *ngIf="donut?.photo" [src]="donut?.photo" width="200" height="200"> 
+    <br/><br/>
+    
+    <div>
+        <h3>Edit</h3>
+        Donut Name: <input type="text" id="donutName" [(ngModel)]="editName" [value]="donut?.name"><br/>
+        Calories: <input type="number" id="donutCal" [(ngModel)]="editCal" [value]="donut?.calories"><br/>
+        Photo url: <input type="text" id="donutUrl" [(ngModel)]="editUrl" [value]="donut?.photo" style="width: 1000px;"><br/>
+        <button (click)="updateDonut()" class="button" type="submit">Update Donut</button>
+    </div>
 </div>
+

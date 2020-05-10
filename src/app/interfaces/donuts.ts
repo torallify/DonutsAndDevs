@@ -5,6 +5,7 @@ export interface Donuts {
 
 export interface Donut {
   id: number;
+  ref: string;
   name: string;
   photo: string;
   calories: number;

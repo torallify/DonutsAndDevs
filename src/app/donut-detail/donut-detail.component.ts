@@ -11,20 +11,30 @@ import { ActivatedRoute } from '@angular/router';
 export class DonutDetailComponent implements OnInit {
   donut: Donut;
   id: number;
+  editName:string;
+  editCal:number;
+  editUrl:string;
 
   constructor(
     private donutService:DonutAPIService,
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(){
     this.route.params.subscribe(param => {
       this.id = +param['id'];
     });
 
-    this.donutService.getDonutById(this.id).subscribe(
-      (data: Donut) => this.donut = { ...data },
-      error => console.error(error)
-    );
+    this.donut = await this.donutService.getDonutById(this.id)
+    this.editName = this.donut.name;
+    this.editCal = this.donut.calories;
+    this.editUrl = this.donut.photo || "";
+  }
+
+  async updateDonut()
+  {
+    this.donutService.updateDonut(this.id, {name:this.editName, calories:this.editCal, photo: this.editUrl})
+    
+    this.donut = await this.donutService.getDonutById(this.id)
   }
 }
